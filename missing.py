@@ -1,11 +1,8 @@
 import pandas as pd
 import numpy as np
 
-data = {"A":[1, 2, np.nan, 4],
-        "B":[5, np.nan, 7, 8]}
+data = np.array([1, 2, np.nan, 4, np.nan])
 
-df = pd.DataFrame(data)
+df = pd.DataFrame(data, columns=["Values"])
 
-df = df.fillna(df.mean())
-
-print(df)
+print(df.isna())
